@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatBox</title>
+
+    <style>
+        body{
+            background-color: #EEEEEE;
+        }
+        section{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+        }
+        form{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 10px;
+            border-radius: 4px;
+            padding: 1rem;
+            text-align: center;
+
+        }
+        .answer{
+            padding: 1rem;
+            margin: 0 3rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        input{
+            width: 20rem;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #EBCB90;
+        }
+        input:focus{
+            outline: none;
+            border: 1px solid #3396D3;
+        }
+        button{
+            padding: .6rem 1.2rem;
+            border-radius: 8px;
+            background-color:#3396D3;
+            color: #fff;
+            font-size: 1rem;
+            border: 1px solid #EBCB90;
+        }
+        button:hover{
+            background-color: #EBCB90;
+            color: #3396D3;
+            transition-duration: .4s;
+            border: 1px solid #3396D3;
+            cursor: pointer;
+        }
+        p{
+            padding: 1rem;
+            font-family: "Inter", "Helvetica Neue", sans-serif;
+            font-size: 1rem;
+            line-height: 1.7rem;
+            color: #444;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+  <section>
+    <form th:method="POST" th:action="@{/submitText}">
+        <h2>Chatbox AI</h2>
+        <input type="text" name="userText" placeholder="Enter a text:">
+        <button type="submit">Ask AI</button>
+    </form>
+      <div class="answer">
+          <p th:text="${response}">A Full-Stack Developer is a versatile software developer who is proficient in both the front-end and back-end aspects of web development. This means they can work on everything from the user interface (UI) that users interact with to the server-side logic and database management that power the application. Here’s a breakdown of what a Full-Stack Developer typically does: ### Front-End Development: 1. **User Interface Design**: Creating visually appealing and user-friendly interfaces using HTML, CSS, and JavaScript frameworks/libraries (like React, Angular, or Vue.js). 2. **Responsive Design**: Ensuring that applications are responsive and function well on various devices and screen sizes. 3. **Client-Side Logic**: Implementing functionality that runs in the browser, such as form validation and dynamic content updates. ### Back-End Development: 1. **Server-Side Logic**: Writing the code that runs on the server, handling requests from the client side, and processing data. 2. **Database Management**: Designing and managing databases, often using SQL (MySQL, PostgreSQL) or NoSQL (MongoDB) databases to store, retrieve, and manipulate data. 3. **API Development**: Creating and integrating APIs (Application Programming Interfaces) that allow different parts of the application to communicate with each other or with third-party services. ### Additional Responsibilities: 1. **Version Control**: Using tools like Git for version control to manage changes to the codebase and collaborate with other developers. 2. **Deployment**: Setting up and maintaining the deployment pipeline to ensure that applications are deployed efficiently and reliably to production environments. 3. **DevOps Practices**: Sometimes involved in DevOps practices, including continuous integration and continuous deployment (CI/CD), to streamline the development process. 4. **Problem Solving**: Troubleshooting issues that arise in both the front-end and back-end, ensuring the application runs smoothly. 5. **Collaboration**: Working closely with designers, project managers, and other developers to understand requirements and deliver a cohesive product. ### Skills Required: - Proficiency in front-end technologies (HTML, CSS, JavaScript, and frameworks). - Knowledge of back-end technologies (Node.js, Python, Ruby, PHP, Java, etc.). - Familiarity with databases (SQL and NoSQL). - Understanding of version control systems (e.g., Git). - Basic knowledge of server management and deployment processes. ### Conclusion: Full-Stack Developers are valuable assets to any development team because of their broad skill set, allowing them to understand and contribute to all aspects of a web application. This versatility makes them capable of taking a project from conception to deployment, and they can effectively bridge the gap between front-end and back-end development.</p>
+      </div>
+
+  </section>
+
+</body>
+</html>
