@@ -13,3 +13,6 @@
 
 *   docker run -p 9090:8080 -e OPEN_API_KEY=<your_openai_api_key> spring-op
 *   http://localhost:9090
+
+‼️If you don't have api key, visit the url below and get an api key.
+* https://platform.openai.com/ 
