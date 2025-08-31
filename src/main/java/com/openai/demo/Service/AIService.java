@@ -1,4 +1,4 @@
-package com.openai.demo.Chat;
+package com.openai.demo.Service;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
